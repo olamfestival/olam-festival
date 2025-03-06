@@ -1,0 +1,1570 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: gn-bold;
+    src: url(../assets/fonts/gn-bold.woff2);
+  }
+
+  @font-face {
+    font-family: mn-medium;
+    src: url(../assets/fonts/mn-medium.woff2);
+  }
+
+  @font-face {
+    font-family: mn-light;
+    src: url(../assets/fonts/mn-light.woff2);
+  }
+
+  @font-face {
+    font-family: mn-bold;
+    src: url(../assets/fonts/mn-bold.woff2);
+  }
+
+  @font-face {
+    font-family: gn-medium;
+    src: url(../assets/fonts/gn-medium.woff2);
+  }
+
+  @font-face {
+    font-family: mn-mono-reg;
+    src: url(../assets/fonts/mn-mono-reg.woff2);
+  }
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    color: #000;
+    overflow-x: hidden;
+}
+
+.toggle {
+    display: none;
+}
+
+.hmbrgOverLay {
+    display: none;
+}
+
+.sectionAText.active {
+    color: rgba(251, 245, 94, 1);
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+.ticketsContainer{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    overflow: hidden;
+}
+
+.stickySides {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.topNav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    z-index: 100;
+    
+}
+
+.topFix {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-inline: auto;
+    z-index: 99;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+.btnTickets {
+    padding: 2.1rem 1rem 2.1rem 1rem; 
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnTickets:hover {
+    opacity: .8;
+}
+
+.logo {
+    z-index: 100;
+}
+
+.bottomEarlyBird {
+    display: none;
+}
+
+
+.ticketsTopSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-top: 8rem
+}
+
+.ticketsTop {
+position: relative;
+}
+
+.ticketsTop::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #8C1DF7;
+    -webkit-backdrop-filter: blur(120px);
+    filter: blur(120px);
+    z-index: -10;
+}
+
+
+
+.ticketsTitle {
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.ticketsTitle h1 {
+    font-family: gn-bold;
+    text-transform: uppercase;
+    font-size: 4.2rem;
+    color: #fff;
+    line-height: 100%;
+}
+
+.ticketsCardSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+/* card */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #000;
+    color: #FFFFFB;
+    max-width: 20rem;
+    height: auto;
+    padding: 1.2rem;
+    border-radius: .4rem;
+
+    transition: all .5s ease;
+}
+
+.card.earlyBird {
+    cursor: pointer;
+    opacity: .4;
+    z-index: -1;
+}
+
+.cardWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* cardTop */
+.cardWrapTop {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardWrapTop h1 {
+    font-family: mn-mono-reg;
+    font-weight: 200;
+    font-size: 4rem;
+    display: flex;
+}
+
+sup {
+    font-size: 2.2rem;
+}
+
+.cardWrapTop p {
+    font-family: gn-medium;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+
+/* cardMid */
+.cardWrapMid {
+    border-top: 1px #626262 solid;
+    min-height: 15rem;
+    padding-top: 1.2rem;
+}
+
+.cardWrapMid p {
+    font-family: mn-medium;
+    font-size: 1rem;
+    padding-bottom: 1.6rem;
+}
+
+
+/* cardBtn */
+
+.cardWrapbtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cardWrapbtn p {
+    font-family: mn-mono-reg;
+    font-size: .8rem;
+}
+
+.cardBtn {
+    cursor: pointer;
+    padding: 1.2rem 6rem;
+    font-family: mn-medium;
+    font-size: 1rem;
+    background-color: #8D20F7;
+    color: #fff;
+    border-radius: .4rem;
+    transition: all .3s ease-out;
+    border: none;
+}
+
+.cardBtn.out {
+    padding: 1.2rem 4rem;
+}
+
+.cardBtn:hover {
+    background-color: #fff;
+    color: #8D20F7;
+}
+
+
+.ticketsMidSection {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+
+.ticketsMidSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FBF55E;
+    -webkit-backdrop-filter: blur(120px);
+    filter: blur(120px);
+    z-index: -10;
+}
+
+.ticketsCardSection.second {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.ticketsBottomSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 12rem;
+}
+
+.ticketBottomText {
+    padding-bottom: 0rem;
+}
+
+.ticketBottomText p {
+    font-family: mn-medium;
+    font-size: 1.2rem;
+}
+
+.ticketBottom {
+    max-width: 80%;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='4' ry='4' stroke='black' stroke-width='2.2' stroke-dasharray='8%2c 11%2c 11%2c 16' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+    border-radius: 4px;
+    padding: 2rem;
+    border-radius: .4rem;
+}
+
+.spotTickets {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.spotTicketsTitle h2 {
+    font-family: gn-bold;
+    font-size: 5rem;
+}
+
+.spotTicketsMid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.spotTicketsMid p{
+    font-family: mn-medium;
+    max-width: 60%;
+    font-size: 1.2rem;
+}
+
+
+
+.spotTicketsPrice h3 {
+    display: flex;
+    font-family: mn-mono-reg;
+    font-size: 4.2rem;
+}
+
+.spotTicketsPrice sup {
+    color: rgb(144, 144, 144);
+}
+
+
+
+/* footer */
+.footer {
+    position: relative;
+    background: #8C1DF7;
+    display: flex;
+    /* align-items: flex-end; */
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 3rem 2rem 5.2rem 2rem;
+}
+
+.gradical {
+    padding-top: 3rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.gradical li {
+    font-size: .9rem;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-between;
+}
+
+.footerLinksContainer {
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    color: #fff;
+}
+
+.footerLogo {
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+}
+
+.footerLogo img {
+    height: 100%;
+    width: 100%;
+}
+
+.footerLink {
+    padding-top: .8rem;
+    /* padding-right: 2rem; */
+    text-transform: uppercase;
+    font-family: mn-mono-reg;
+    color: #fff;
+}
+
+
+
+.footerLink a{
+    text-transform: uppercase;
+    font-family: mn-mono-reg;
+    color: #fff;
+}
+
+.Links {
+    padding-right: 3rem;
+    color: #fff;
+}
+
+/* .Links._A {
+    display: flex;
+} */
+
+.Links._A{
+    display: flex;
+    flex-direction: row;
+}
+
+.ul_B {
+    padding-top: 2rem;
+    padding-left: .3rem;
+}
+
+.Links h3 {
+    font-family: gn-bold;
+    font-size: 1.4rem;
+    letter-spacing: -6.5%;
+    line-height: 87%;
+    color: #fff;
+
+    padding-bottom: .8rem;
+    /* border: 1px red solid; */
+}
+
+
+
+
+
+/* mediaQuery */
+@media(max-width: 1310px) {
+
+    .ticketsTitle h1 {
+        font-size: 4rem;
+        line-height: 96%;
+    }
+
+    .card {
+        max-width: 19rem;
+        height: auto;
+    }
+    /* reduce button */
+    .cardBtn {
+        cursor: pointer;
+        padding: 1rem 5rem;
+        font-size: 1rem;
+        border-radius: .4rem;
+    }
+
+    /* reduce spotTickets */
+    .ticketBottom {
+        max-width: 80%;
+    }
+}
+
+
+@media(max-width: 1250px) {
+
+    .sideStickyL{
+        height: 650px;
+    }
+
+    .sideStickyR{
+        height: 650px;
+    }
+
+    .ticketsTitle h1 {
+        font-size: 3.8rem;
+        line-height: 92%;
+    }
+
+    .card {
+        max-width: 18rem;
+        height: auto;
+    }
+    /* reduce button */
+    .cardBtn {
+        cursor: pointer;
+        padding: 1rem 5rem;
+        font-size: 1rem;
+        border-radius: .4rem;
+    }
+
+    /* reduce spotTickets */
+    .ticketBottom {
+        max-width: 78%;
+    }
+
+    .spotTicketsTitle h2 {
+        font-family: gn-bold;
+        font-size: 4.6rem;
+    }
+
+    .spotTicketsMid p{
+        font-family: mn-medium;
+        max-width: 60%;
+        font-size: 1rem;
+    }
+
+    .spotTicketsPrice h3 {
+        font-size: 3.8rem;
+    }
+
+    /* footer */
+    .Links h3 {
+        font-family: gn-bold;
+        font-size: 1.4rem;
+    }
+
+    .Links {
+        padding-right: 2.8rem;
+    }
+
+    /*  */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3rem 2rem 5.2rem 2rem;
+    }
+    
+    .gradical {
+        padding-top: 3rem;
+        padding-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .gradical li {
+        font-size: .86rem;
+    }
+    
+    .footerContainer {
+        display: flex;
+        flex-direction: row;
+        width: 96%;
+        align-items: center;
+        text-transform: uppercase;
+        justify-content: space-between;
+    }
+    
+    .footerLinksContainer {
+        display: flex;
+        font-size: .9rem;
+    }
+    
+    .footerLogo {
+        height: 9rem;
+        width: 9rem;
+    }
+    
+    .footerLink {
+        padding-top: .8rem;
+    }
+
+}
+
+
+@media(max-width: 1150px) {
+    .sideStickyL{
+        height: 580px;
+    }
+
+    .sideStickyR{
+        height: 580px;
+    }
+
+    .ticketsTitle h1 {
+        font-size: 3.6rem;
+        line-height: 87%;
+    }
+
+    .card {
+        max-width: 17rem;
+        height: auto;
+    }
+
+    .cardWrapTop h1 {
+        font-family: mn-mono-reg;
+        font-weight: 200;
+        font-size: 3.6rem;
+        display: flex;
+    }
+    
+    sup {
+        font-size: 1.8rem;
+    }
+    
+    .cardWrapTop p {
+        font-family: gn-medium;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+    
+    
+    .cardWrapMid p {
+        font-family: mn-medium;
+        font-size: .9rem;
+    }
+    
+
+    /* reduce button */
+    .cardBtn {
+        cursor: pointer;
+        padding: .6rem 4rem;
+        font-size: 1rem;
+        border-radius: .4rem;
+    }
+
+    /* reduce spotTickets */
+    .ticketBottom {
+        max-width: 78%;
+    }
+
+    .spotTicketsTitle h2 {
+        font-family: gn-bold;
+        font-size: 4.6rem;
+    }
+
+    .spotTicketsMid p{
+        font-family: mn-medium;
+        max-width: 60%;
+        font-size: 1rem;
+    }
+
+    .spotTicketsPrice h3 {
+        font-size: 3.8rem;
+    }
+
+    /* footer */
+    .Links h3 {
+        font-family: gn-bold;
+        font-size: 1.2rem;
+    }
+
+    .Links {
+        padding-right: 2.8rem;
+    }
+
+    /*  */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3rem 2rem 5.2rem 2rem;
+    }
+    
+    .gradical {
+        padding-top: 3rem;
+        padding-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .gradical li {
+        font-size: .82rem;
+    }
+    
+    .footerContainer {
+        width: 100%;
+    }
+    
+    .footerLinksContainer {
+        display: flex;
+        font-size: .9rem;
+    }
+    
+    .footerLogo {
+        height: 9rem;
+        width: 9rem;
+    }
+    
+    .footerLink {
+        padding-top: .8rem;
+    }
+}
+
+@media(max-width: 1090px){
+
+    .sideStickyL{
+        height: 510px;
+    }
+
+    .sideStickyR{
+        height: 510px;
+    }
+
+    .ticketsTitle h1 {
+        font-size: 3.4rem;
+    }
+
+    .card {
+        max-width: 17rem;
+    }
+}
+
+
+@media(max-width: 1054px){
+    .card {
+        max-width: 16rem;
+    }
+}
+
+
+@media(max-width: 1000px) {
+    .sideStickyL{
+        height: 600px;
+    }
+    .sideStickyR{
+        height: 600px;
+    }
+
+    .card {
+        max-width: 21rem;
+    }
+
+    .cardWrapTop h1 {
+        font-weight: 200;
+        font-size: 4rem;
+    }
+    
+    sup {
+        font-size: 2.2rem;
+    }
+    
+    .cardWrapTop p {
+        font-size: 1.3rem;
+    }
+    
+    
+    /* cardMid */
+    .cardWrapMid {
+        padding-top: 1.2rem;
+    }
+    
+    .cardWrapMid p {
+        font-size: 1rem;
+    }
+    
+    
+    /* cardBtn */
+    
+    .cardWrapbtn p {
+        font-size: .8rem;
+    }
+    
+    .cardBtn {
+        padding: 1rem 6rem;
+    }
+
+    .ticketsCardSection {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    .ticketsCardSection.second {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    /* reduce spotTickets */
+    .ticketBottom {
+        max-width: 76%;
+    }
+
+    .spotTicketsTitle h2 {
+        font-family: gn-bold;
+        font-size: 3rem;
+        line-height: 87%;
+    }
+
+    .spotTicketsMid p{
+        font-family: mn-medium;
+        max-width: 70%;
+        font-size: 1rem;
+    }
+
+    .spotTicketsPrice h3 {
+        font-size: 2.6rem;
+    }
+
+    /* switch */
+    .topNav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border: 1px red solid; */
+    }
+    
+    .topFix {
+        /* border: 1px red solid; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btnTickets {
+        display: none;
+    }
+
+    .bottomEarlyBird {
+        cursor: pointer;
+        display: inline-block;
+        background: none;
+        border: none;
+        font-family: gn-medium;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .bottomTicket {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+        /* height: 3rem; */
+        padding: 1.6rem;
+        border-top-right-radius: 2rem;
+        border-top-left-radius: 2rem;
+        -webkit-box-shadow: 0px -9px 64px 12px rgba(255,130,255,.6);
+        -moz-box-shadow: 0px -9px 64px 12px rgba(255,130,255,.6);
+        box-shadow: 0px -9px 64px 12px rgba(255,130,255,.6);
+        background: #000;
+        width: 100%;
+        z-index: 1;
+        /* border: 1px red solid */
+    }
+
+
+    /* footer */
+.footer {
+    position: relative;
+    background: #8C1DF7;
+    display: flex;
+    /* align-items: flex-end; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem 10.4rem 3rem;
+}
+
+.gradical {
+    padding-top: 3rem;
+    padding-right: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gradical li {
+    font-size: .8rem;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-between;
+}
+
+.footerLinksContainer {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    font-size: 1rem;
+    /* align-items: center; */
+}
+
+.footerLogo {
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    padding-bottom: 3rem;
+}
+
+.footerLogo img {
+    height: 100%;
+    width: 100%;
+}
+
+.footerLink {
+    padding-top: .8rem;
+    text-transform: uppercase;
+    font-family: mn-mono-reg;
+    color: #fff;
+    font-size: .8rem
+}
+
+
+
+.footerLink a{
+    text-transform: uppercase;
+    font-family: mn-mono-reg;
+}
+
+.Links {
+    padding: 0 1.5rem;
+}
+
+.Links._A{
+    display: flex;
+    flex-direction: row;
+}
+
+.ul_B {
+    padding-top: 2rem;
+    padding-left: .3rem;
+}
+
+.Links h3 {
+    font-family: gn-bold;
+    font-size: 1.2rem;
+    letter-spacing: -6.5%;
+    line-height: 87%;
+    color: #fff;
+
+    padding-bottom: .8rem;
+}
+
+
+}
+
+@media(max-width: 820px) {
+    
+    .ticketBottomText p {
+        font-size: 1rem;
+    }
+
+    .spotTicketsTitle h2 {
+        font-family: gn-bold;
+        font-size: 2.4rem;
+        line-height: 87%;
+    }
+
+    .spotTicketsMid p{
+        font-family: mn-medium;
+        max-width: 60%;
+        font-size: .9rem;
+    }
+
+    .spotTicketsPrice h3 {
+        font-size: 2rem;
+    }
+
+    .spotTicketsPrice sup {
+        font-size: 1.6rem;
+    }
+}
+
+@media(max-width: 740px) {
+    .ticketsTitle h1 {
+        font-size: 2.8rem;
+        line-height: 87%;
+    }
+}
+
+
+@media(max-width: 670px) {
+    /* removeStickySide */
+    .sideStickyL {
+        display: none;
+    }
+
+    .sideStickyR {
+        display: none;
+    }
+
+    .ticketBottom {
+        max-width: 80%;
+    }
+
+    .spotTicketsMid p{
+        max-width: 62%;
+        font-size: .8rem;
+    }    
+}
+
+
+@media(max-width: 600px) {
+    .ticketBottomText p {
+        font-family: mn-medium;
+        font-size: 1rem;
+    }
+    
+    .spotTicketsTitle h2 {
+        font-family: gn-bold;
+        font-size: 2rem;
+    }
+    
+    .spotTicketsMid {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .spotTicketsMid p{
+        font-family: mn-medium;
+        max-width: 60%;
+        font-size: .8rem;
+    }
+    
+    .spotTicketsPrice h3 {
+        font-size: 2.2rem;
+    }
+
+     /* footer */
+.footer {
+    padding: 3rem 2rem 10.4rem 2rem;
+    align-items: flex-start;
+}
+
+.gradical {
+    padding-top: 3rem;
+    padding-right: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gradical li {
+    font-size: .8rem;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-between;
+
+}
+
+.footerLinksContainer {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    font-size: 1rem;
+}
+
+.footerLogo {
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    padding-bottom: 3rem;
+}
+
+.footerLink {
+    padding-top: .8rem;
+    text-transform: uppercase;
+    font-family: mn-mono-reg;
+    color: #fff;
+    font-size: .76rem
+}
+
+
+.Links {
+    padding: 0 1.5rem;
+}
+
+
+.Links h3 {
+    font-family: gn-bold;
+    font-size: 1.1rem;
+    letter-spacing: -6.5%;
+    line-height: 87%;
+    color: #fff;
+
+    padding-bottom: .4rem;
+}
+
+.gradical {
+    align-items: flex-start;
+    padding-right: 2.8rem;
+}
+
+
+
+
+    
+}
+
+
+
+
+@media(max-width: 530px) {
+
+    .ticketsTitle h1 {
+        font-size: 2.2rem;
+        line-height: 100%;
+    }
+
+    .card {
+        max-width: 18rem;
+    }
+    
+    .cardWrapTop h1 {
+        font-family: mn-mono-reg;
+        font-weight: 200;
+        font-size: 3.6rem;
+        display: flex;
+    }
+    
+    sup {
+        font-size: 1.8rem;
+    }
+    
+    .cardWrapTop p {
+        font-family: gn-medium;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+    }
+    
+    
+    .cardWrapMid p {
+        font-size: 1rem;
+    }
+    
+    .cardWrapbtn p {
+        font-size: .8rem;
+    }
+    
+    .cardBtn {
+        padding: 1rem 5rem;
+        font-size: .8rem;
+    }
+    /* --- */
+
+    .ticketBottomText p {
+        font-family: mn-medium;
+        font-size: 1rem;
+    }
+    
+    .spotTicketsTitle h2 {
+        font-family: gn-bold;
+        font-size: 1.8rem;
+    }
+    
+    .spotTicketsMid {
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .spotTicketsMid p{
+        font-family: mn-medium;
+        max-width: 70%;
+        font-size: .7rem;
+    }
+    
+    .spotTicketsPrice h3 {
+        font-size: 1.4rem;
+    }
+
+
+}
+
+
+
+
+
+
+
+@media(max-width: 450px) {
+     /* NewFooter */
+     .footer {
+        position: relative;
+        background: #8C1DF7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem 1rem 10rem 1rem;
+    }
+
+    .gradical {
+        align-items: flex-start;
+        padding-top: 0;
+        padding-right: 2.8rem;
+    }
+
+    .gradical li {
+        font-size: .62rem;
+    }
+    
+    .footerContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        text-transform: uppercase;
+        justify-content: space-between;
+    }
+    
+    .footerLinksContainer {
+        font-size: 1rem;
+        
+        padding-left: 1.6rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    .footerLink {
+        padding-top: .4rem;
+        /* border: 1px red solid; */
+        text-transform: uppercase;
+        font-family: mn-mono-reg;
+        font-size: .8rem;
+        padding-right: 2rem;
+    }
+
+    
+    .footerLogo {
+        /* border: 1px green solid; */
+        height: 10rem;
+        width: 8rem;
+        padding-bottom: 1rem;
+    }
+    
+    .footerLink a{ 
+        /* comehere */
+        text-transform: uppercase;
+        font-family: mn-mono-reg;
+    }
+    
+    
+    .Links._A{
+        display: flex;
+        flex-direction: column;
+        padding-right: 4rem;
+        /* border: 1px red solid; */
+    }
+    
+    .ul_B {
+        padding-top: 0rem;
+        padding-left: 0rem;
+    }
+    
+    .Links h3 {
+        font-family: gn-bold;
+        font-size: 1rem;
+        letter-spacing: -6.5%;
+        line-height: 87%;
+        color: #fff;
+    
+        padding-bottom: .3rem;
+        padding-left: .15rem;
+        /* border: 1px red solid; */
+    }
+
+    .Links {
+        padding: 1rem 0;
+        padding-right: 1.6rem;
+    }
+    /* ---- */
+
+    .sideStickyR {
+        display: none;
+    }
+
+    .sideStickyL {
+       display: none;
+    }
+
+    .topNav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border: 1px red solid; */
+    }
+    
+    .topFix {
+        /* border: 1px red solid; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo  img{
+        width: 15rem;
+    }
+
+    .toggle {
+        display: block;
+        z-index: 20000000;
+        position: fixed;
+        right: 2.6%;
+        top: .8%;
+        cursor: pointer;
+        width: 56px;
+        height: 56px;
+        opacity: 0;
+    }
+
+    
+    
+
+    .menu-btn {
+        cursor: pointer;
+        /* display: block; */
+        background: #000;
+        height: 4rem;
+        width: 4rem;
+        z-index: 200000;
+        position: fixed;
+        top: .2%;
+        right: 2%;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .8s ease;
+    }
+
+    
+
+    .hmbrg {
+        content: '';
+        background: #fff;
+        height: 3px;
+        width: 26px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .2s ease;
+    }
+
+    .hmbrg::before {
+        content: '';
+        background: #fff;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        top: 7px;
+    }
+
+    .hmbrg::after {
+        content: '';
+        background: #fff;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        top: -7px;
+    }
+
+    .toggle:checked + .menu-btn > div {
+        transform: rotate(130deg);
+    }
+
+    .toggle:checked + .menu-btn > div::before,
+    .toggle:checked + .menu-btn > div::after {
+        top: 0;
+        transform: rotate(102deg);
+    }
+
+
+
+    .hmbrgOverLay {
+        /* display: none; */
+        position: absolute;
+        z-index: 20000;
+        /* top: 50%;
+        left: 50%; */
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.96);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* transition: all .5s ease; */
+        border-radius: 50%;
+        scale: 0;
+        opacity: 0;
+        /* transition: all .3s ease-in-out; */
+    }
+
+    .hmbrgOverLay.reveal {
+        position: fixed;
+        z-index: 20000;
+        /* top: 50%;
+        left: 50%; */
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.96);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all .3s ease;
+        border-radius: 0;
+        scale: 1;
+        opacity: 1;
+    }
+
+    .hmbrgOverLayContainer {
+        width: 90%;
+        height: auto;
+    }
+    
+    .sectionA {
+        border-bottom: 1px rgba(105, 105, 105, 1) solid;
+    }
+
+    .sectionAText {
+        font-family: gn-bold;
+        font-size: 1.2rem;
+        padding: 1rem .6rem;
+    }
+
+    .hmbrgOverLayText {
+        font-family: mn-medium;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        padding: .6rem 0;
+    }
+
+    .hmbrgOverLaySubText {
+        font-family: mn-mono-reg; 
+        font-size: .9rem;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .hmbrgOverLaySubTextLink {
+        padding: .6rem 0;
+    }
+
+    .sectionB {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        height: auto;
+    }
+
+    .btnTickets {
+        display: none;
+    }
+
+    .bottomEarlyBird {
+        cursor: pointer;
+        display: inline-block;
+        background: none;
+        border: none;
+        font-family: gn-medium;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .bottomTicket {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+        /* height: 3rem; */
+        padding: 1.6rem;
+        border-top-right-radius: 2rem;
+        border-top-left-radius: 2rem;
+        -webkit-box-shadow: 0px -9px 64px 12px rgba(255,130,255,.6);
+        -moz-box-shadow: 0px -9px 64px 12px rgba(255,130,255,.6);
+        box-shadow: 0px -9px 64px 12px rgba(255,130,255,.6);
+        background: #000;
+        width: 100%;
+        z-index: 1;
+        /* border: 1px red solid */
+    }
+
+    .spotTicketsPrice sup {
+        font-size: .9rem;
+    }
+
+    
+ 
+
+}
+
+
+@media(max-width: 390px) {
+    .ticketsTitle h1 {
+        font-size: 2.2rem;
+        line-height: 87%;
+    }
+
+    .card {
+        max-width: 16rem;
+    }
+
+    .cardBtn {
+        padding: 1rem 4rem;
+        font-size: .8rem;
+    }
+}

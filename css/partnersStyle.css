@@ -1,0 +1,899 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: gn-bold;
+    src: url(../assets/fonts/gn-bold.woff2);
+  }
+
+  @font-face {
+    font-family: mn-medium;
+    src: url(../assets/fonts/mn-medium.woff2);
+  }
+
+  @font-face {
+    font-family: mn-light;
+    src: url(../assets/fonts/mn-light.woff2);
+  }
+
+  @font-face {
+    font-family: mn-bold;
+    src: url(../assets/fonts/mn-bold.woff2);
+  }
+
+  @font-face {
+    font-family: gn-medium;
+    src: url(../assets/fonts/gn-medium.woff2);
+  }
+
+  @font-face {
+    font-family: mn-mono-reg;
+    src: url(../assets/fonts/mn-mono-reg.woff2);
+  }
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    color: #fff;
+}
+
+/* absolute */
+.bottomEarlyBird {
+    display: none;
+}
+
+.stickySides {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.topNav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    z-index: 100;
+    
+}
+
+.topFix {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-inline: auto;
+    z-index: 99;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+.btnTickets {
+    padding: 2.1rem 1rem 2.1rem 1rem; 
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnTickets:hover {
+    opacity: .8;
+}
+
+.logo {
+    z-index: 100;
+}
+
+
+.container {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #8C1DF7;
+    /* -webkit-backdrop-filter: blur(120px);
+    filter: blur(120px); */
+    z-index: -10;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 6rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+.festivalTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.festivalTitle h1 {
+    font-family: gn-bold;
+    font-size: 3.8rem;
+    font-weight: 700;
+}
+
+.partnersTitle {
+    padding: .8rem 0;
+    width: 80%;
+    border-bottom: 1px #fff solid;
+    margin-inline: auto;
+}
+
+.partnersTitle p {
+    font-family: mn-medium;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+
+.globeWrapper {
+    width: 80%;
+}
+
+.GlobeContainer {
+    width: 70%;
+    margin-inline: auto;
+    display: grid;  
+    grid-template-columns: repeat(5, 1fr);
+    grid-row-gap: 1rem;
+    padding: 2rem 0;
+}
+
+.GlobeContainer.glbe-lg {
+    width: 90%;
+}
+
+
+.squareGlobe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.GlobeContainer.sponsorsGlobes {
+    grid-template-columns: repeat(3, 33.33%);
+}
+
+.Globe {
+    height: 14rem;
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.Globe.globe-sml {
+    height: 10rem;
+    width: 10rem;
+}
+
+.img-logo-container {
+    height: 80px;
+    width: 140px;
+}
+
+.img-logo-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.img-logo-container.logo-sml {
+    height: 60px;
+    width: 100px;
+}
+
+
+/* footer */
+.footer {
+    /* border: 1px red solid; */
+    position: relative;
+    background: #8C1DF7;
+    display: flex;
+    /* align-items: flex-end; */
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 3rem 2rem 5.2rem 2rem;
+}
+
+.gradical {
+    padding-top: 3rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.gradical li {
+    font-size: .9rem;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-between;
+}
+
+.footerLinksContainer {
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    color: #fff;
+}
+
+.footerLogo {
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+}
+
+.footerLogo img {
+    height: 100%;
+    width: 100%;
+}
+
+.footerLink {
+    padding-top: .8rem;
+    /* padding-right: 2rem; */
+    text-transform: uppercase;
+    font-family: mn-mono-reg;
+    color: #fff;
+}
+
+.footerLink a{
+    text-transform: uppercase;
+    font-family: mn-mono-reg;
+    color: #fff;
+}
+
+.Links {
+    padding-right: 3rem;
+    color: #fff;
+}
+
+.Links._A{
+    display: flex;
+    flex-direction: row;
+}
+
+.ul_B {
+    padding-top: 2rem;
+    padding-left: .3rem;
+}
+
+.Links h3 {
+    font-family: gn-bold;
+    font-size: 1.4rem;
+    letter-spacing: -6.5%;
+    line-height: 87%;
+    color: #fff;
+
+    padding-bottom: .8rem;
+    /* border: 1px red solid; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1300px) {
+    .globeWrapper {
+        width: 100%;
+    }
+
+    /*  */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3rem 2rem 5.2rem 2rem;
+    }
+    
+    .gradical {
+        padding-top: 3rem;
+        padding-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .gradical li {
+        font-size: .86rem;
+    }
+    
+    .footerContainer {
+        display: flex;
+        flex-direction: row;
+        width: 96%;
+        align-items: center;
+        text-transform: uppercase;
+        justify-content: space-between;
+    }
+    
+    .footerLinksContainer {
+        display: flex;
+        font-size: .9rem;
+    }
+    
+    .footerLogo {
+        height: 9rem;
+        width: 9rem;
+    }
+    
+    .footerLink {
+        padding-top: .8rem;
+    }
+}
+
+@media(max-width: 1100px) {
+    /* footer */
+    .Links h3 {
+        font-family: gn-bold;
+        font-size: 1.2rem;
+    }
+
+    .Links {
+        padding-right: 2.8rem;
+    }
+
+    /*  */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3rem 2rem 5.2rem 2rem;
+    }
+    
+    .gradical {
+        padding-top: 3rem;
+        padding-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .gradical li {
+        font-size: .82rem;
+    }
+    
+    .footerContainer {
+        width: 100%;
+    }
+    
+    .footerLinksContainer {
+        display: flex;
+        font-size: .9rem;
+    }
+    
+    .footerLogo {
+        height: 9rem;
+        width: 9rem;
+    }
+    
+    .footerLink {
+        padding-top: .8rem;
+    }
+}
+
+
+
+@media(max-width: 980px) {
+    .GlobeContainer {
+        width: 90%;
+    }
+
+    .festivalTitle h1 {
+        font-size: 3rem;
+    }
+
+    .partnersTitle p {
+        font-size: 1.6rem;
+    }
+
+
+      /* footer */
+.footer {
+    position: relative;
+    background: #8C1DF7;
+    display: flex;
+    /* align-items: flex-end; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem 10.4rem 3rem;
+}
+
+.gradical {
+    padding-top: 3rem;
+    padding-right: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gradical li {
+    font-size: .8rem;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-between;
+}
+
+.footerLinksContainer {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    font-size: 1rem;
+    /* align-items: center; */
+}
+
+.footerLogo {
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    padding-bottom: 3rem;
+}
+
+.footerLogo img {
+    height: 100%;
+    width: 100%;
+}
+
+.footerLink {
+    padding-top: .8rem;
+    text-transform: uppercase;
+    font-family: mn-mono-reg;
+    color: #fff;
+    font-size: .8rem
+}
+
+
+
+.footerLink a{
+    text-transform: uppercase;
+    font-family: mn-mono-reg;
+}
+
+.Links {
+    padding: 0 1.5rem;
+}
+
+.Links._A{
+    display: flex;
+    flex-direction: row;
+}
+
+.ul_B {
+    padding-top: 2rem;
+    padding-left: .3rem;
+}
+
+.Links h3 {
+    font-family: gn-bold;
+    font-size: 1.2rem;
+    letter-spacing: -6.5%;
+    line-height: 87%;
+    color: #fff;
+
+    padding-bottom: .8rem;
+}
+
+
+
+
+}
+
+@media(max-width: 950px) {
+    .Globe {
+        height: 12rem;
+        width: 12rem;
+    }
+
+    .Globe.globe-sml {
+        height: 6.8rem;
+        width: 6.8rem;
+    }
+
+    .img-logo-container.logo-sml {
+        height: 50px;
+        width: 80px;
+    }
+
+    .stickySides {
+        display: none;
+    }
+
+    .sideStickyR{
+        display: none;
+    }
+
+    .sideStickyL{
+        display: none;
+    }
+}
+
+@media(max-width: 730px) {
+
+    .GlobeContainer {
+        width: 100%;
+    }
+
+    .GlobeContainer.glbe-lg {
+        width: 96%;
+    }
+
+    .Globe {
+        height: 10.4rem;
+        width: 10.4rem;
+    }
+
+    .img-logo-container {
+        height: 80px;
+        width: 120px;
+    }
+
+    .partnersTitle {
+        width: 90%;
+    }
+
+    .festivalTitle h1 {
+        font-size: 2.6rem;
+    }
+
+    .partnersTitle p {
+        font-size: 1.4rem;
+    }
+
+    /* layoutTopBottom */
+    .topNav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border: 1px red solid; */
+    }
+    
+    .topFix {
+        /* border: 1px red solid; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btnTickets {
+        display: none;
+    }
+
+    .bottomEarlyBird {
+        display: inline-block;
+        background: none;
+        border: none;
+        font-family: gn-medium;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .bottomTicket {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+        /* height: 3rem; */
+        padding: 1.6rem;
+        border-top-right-radius: 2rem;
+        border-top-left-radius: 2rem;
+        -webkit-box-shadow: 0px -9px 64px 12px rgba(255,130,255,.6);
+        -moz-box-shadow: 0px -9px 64px 12px rgba(255,130,255,.6);
+        box-shadow: 0px -9px 64px 12px rgba(255,130,255,.6);
+        background: #000;
+        width: 100%;
+        z-index: 1;
+        /* border: 1px red solid */
+    }
+}
+
+
+@media(max-width: 680px) {
+    .GlobeContainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+}
+
+@media(max-width: 580px) {
+    .Globe {
+        height: 9rem;
+        width: 9rem;
+    }
+
+    .img-logo-container {
+        height: 60px;
+        width: 100px;
+    }
+
+    .festivalTitle h1 {
+        font-size: 2.2rem;
+    }
+
+    .partnersTitle p {
+        font-size: 1.2rem;
+    }
+
+     /* footer */
+.footer {
+    padding: 3rem 2rem 10.4rem 2rem;
+    align-items: flex-start;
+}
+
+.gradical {
+    padding-top: 3rem;
+    padding-right: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gradical li {
+    font-size: .8rem;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-between;
+
+}
+
+.footerLinksContainer {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    font-size: 1rem;
+}
+
+.footerLogo {
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    padding-bottom: 3rem;
+}
+
+.footerLink {
+    padding-top: .8rem;
+    text-transform: uppercase;
+    font-family: mn-mono-reg;
+    color: #fff;
+    font-size: .76rem
+}
+
+
+.Links {
+    padding: 0 1.5rem;
+}
+
+
+.Links h3 {
+    font-family: gn-bold;
+    font-size: 1.1rem;
+    letter-spacing: -6.5%;
+    line-height: 87%;
+    color: #fff;
+
+    padding-bottom: .4rem;
+}
+
+.gradical {
+    align-items: flex-start;
+    padding-right: 2.8rem;
+}
+}
+
+@media(max-width: 530px) {
+    .GlobeContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .GlobeContainer.sponsorsGlobes {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    /* NewFooter */
+    .footer {
+        position: relative;
+        background: #8C1DF7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 3rem 0rem 10rem 0rem;
+    }
+
+    .gradical {
+        align-items: flex-start;
+        padding-top: 0;
+        padding-right: 0rem;
+    }
+
+    .gradical li {
+        font-size: .62rem;
+    }
+    
+    .footerContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        text-transform: uppercase;
+        justify-content: space-between;
+    }
+    
+    .footerLinksContainer {
+        font-size: 1rem;
+        padding-left: 3rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    .footerLink {
+        padding-top: .4rem;
+        /* border: 1px red solid; */
+        text-transform: uppercase;
+        font-family: mn-mono-reg;
+        font-size: .8rem;
+        padding-right: 2rem;
+    }
+
+    
+    .footerLogo {
+        /* border: 1px green solid; */
+        height: 10rem;
+        width: 8rem;
+        padding-bottom: 1rem;
+    }
+    
+    .footerLink a{ 
+        /* comehere */
+        text-transform: uppercase;
+        font-family: mn-mono-reg;
+    }
+    
+    
+    .Links._A{
+        display: flex;
+        flex-direction: column;
+        padding-right: 4rem;
+        /* border: 1px red solid; */
+    }
+    
+    .ul_B {
+        padding-top: 0rem;
+        padding-left: 0rem;
+    }
+    
+    .Links h3 {
+        font-family: gn-bold;
+        font-size: 1rem;
+        letter-spacing: -6.5%;
+        line-height: 87%;
+        color: #fff;
+    
+        padding-bottom: .3rem;
+        padding-left: .15rem;
+        /* border: 1px red solid; */
+    }
+
+    .Links {
+        padding: 1rem 0;
+        padding-right: 1.6rem;
+    }
+    /* ---- */
+
+}
+
+@media(max-width: 420px) {
+
+    .wrapper {
+        padding: 8rem .8rem;
+    }
+
+    .festivalTitle h1 {
+        font-size: 1.8rem;
+    }
+
+    .partnersTitle {
+        width: 100%;
+    }
+
+    .Links {
+        padding-right: 0rem;
+    }
+}
+
+@media(max-width: 392px) {
+    .GlobeContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Links {
+        padding-right: 0rem;
+    }
+}
