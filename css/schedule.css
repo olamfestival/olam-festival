@@ -9,6 +9,21 @@ body {
     background: -webkit-linear-gradient(to top, #E5E5BE, #003973);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #E5E5BE, #003973); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+#wa-widget-send-button > div {
+    font-family: maison-neue-mono;
+    text-underline-position: auto !important;
+}
+.maison-neue {
+    font-family: maison-neue-mono;
+}
+
+/* font-faces */
+/* maison-neue-mono */
+
+@font-face {
+    font-family: maison-neue-mono;
+    src: url(../assets/fonts/maison-neue-mono-reg.woff2);
+}
 
 .main-section{
     display: flex;
